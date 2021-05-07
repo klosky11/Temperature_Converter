@@ -20,8 +20,8 @@ function domLoaded() {
        }
    })
 
-   function hideImage() {
-       weatherImage.style.display = "none";
+function hideImage() {
+   weatherImage.style.display = "none";
    }
 
 }
@@ -57,35 +57,31 @@ function convertTemperature() {
        }
       }else {
        errorMessage.innerText = "please enter temperature";
-   }
+ }
 
-   function checkErrorInput(input) {
-       if (isNaN(parseFloat(input))) {
-           errorMessage.innerHTML = input + " is not a number";
-           return false;  
-         }else {
-           errorMessage.innerHTML = "";
-           return true;  
-       }
-   }
+function checkErrorInput(input) {
+   if (isNaN(parseFloat(input))) {
+      errorMessage.innerHTML = input + " is not a number";
+      return false;  
+   }else {
+      errorMessage.innerHTML = "";
+      return true;  
+      }
+}
 
-   function showImage(degree) {
-       if (degree < 32) {
-           weatherImage.src = "cold.png";
+function showImage(degree) {
+   if (degree < 32) {
+      weatherImage.src = "cold.png";
            
-         }else if (degree >= 32 && degree <= 50) {
-           weatherImage.src = "cool.png";
+   }else if (degree >= 32 && degree <= 50) {
+      weatherImage.src = "cool.png";
            
-            }else {
-            weatherImage.src = "warm.png"; 
-           
-       }
-       weatherImage.style.display = "block";
+   }else {
+      weatherImage.src = "warm.png"; 
+   }
+      weatherImage.style.display = "block";
 
    }
-
-
-
 }
 
 
